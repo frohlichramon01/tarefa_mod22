@@ -1,0 +1,67 @@
+@use 'variables';
+
+
+
+.cards{
+    padding: 80px 0;
+    height: 500px;
+    background-image: linear-gradient(variables.$color0, variables.$color1);
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+
+.flip-card {
+    border-radius: 10px;
+    background-color: transparent;
+    width: 400px;
+  }
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+
+.flip-card-front {
+    background-color: #bbb;
+  }
+
+.flip-card-front > img {
+    border-radius: 20px;
+}
+  
+
+.flip-card-back {
+    background-color: variables.$color1;
+    color: variables.$textColor;
+    transform: rotateY(180deg);
+  }
+
+
+@media (max-width: 640px) {
+    .cards > .container{
+        display: block;
+    }
+
+}
