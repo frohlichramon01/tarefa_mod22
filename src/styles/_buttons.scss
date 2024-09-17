@@ -1,6 +1,8 @@
 @use 'variables';
 
 .button{
+    display: flex;
+    align-items: center;
     border-radius: 30px;
     padding: 12px;
     font-size: 18px;

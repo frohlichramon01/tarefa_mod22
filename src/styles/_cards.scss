@@ -1,7 +1,6 @@
 @use 'variables';
 
 
-
 .cards{
     padding: 80px 0;
     height: 500px;
@@ -58,10 +57,17 @@
     transform: rotateY(180deg);
   }
 
-
-@media (max-width: 640px) {
-    .cards > .container{
-        display: block;
+@media (max-width: 1024px) {
+    .cards{
+      height: 1300px;
+      &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 400px;
+      }
     }
 
 }
+
+

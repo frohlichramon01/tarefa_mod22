@@ -49,7 +49,7 @@
 
     @media (max-width: 640px) {
         .container{
-            display: block;
+            display: inline-block;
         }
 
         &__image{
@@ -61,5 +61,7 @@
             margin-bottom: 16px;
         }
     }
+
+    
 
 }

@@ -1,5 +1,6 @@
 AOS.init();
 
+// TIMER
 const eventDate = new Date("Jan 17, 2025 20:00:00");
 const eventTimeStamp = eventDate.getTime();
 
@@ -20,5 +21,16 @@ const countTime = setInterval(function(){
         clearInterval(countTime);
         document.getElementById('expired').innerHTML = 'has already passed :(';
     }
-
 }, 1000)
+
+
+// CONFETTI
+document.getElementById('button-confetti').addEventListener('click', (e)=>{
+    e.preventDefault();
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    
+});
