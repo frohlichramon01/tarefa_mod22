@@ -2,17 +2,25 @@
 
 
 .cards{
-    padding: 80px 0;
+    padding: 60px 0;
     height: 500px;
     background-image: linear-gradient(variables.$color0, variables.$color1);
     &__list{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 40px;
+        padding-left: 0;
     }
 }
 
+.cards > h1 {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
 
 .flip-card {
     border-radius: 10px;
@@ -57,7 +65,8 @@
     transform: rotateY(180deg);
   }
 
-@media (max-width: 1024px) {
+
+  @media (max-width: 640px) {
     .cards{
       height: 1300px;
       &__list{
@@ -68,6 +77,38 @@
       }
     }
 
+    .flip-card-back > p {
+      margin: 20px;
+    }
+  }
+
+
+@media (max-width: 1024px) {
+    .cards{
+      height: 1300px;
+      &__list{
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 400px;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .cards{
+        height: 1300px;
+        &__list{
+          width: 80%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+      }
+
 }
 
-
+}
